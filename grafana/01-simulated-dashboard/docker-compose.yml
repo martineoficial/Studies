@@ -1,0 +1,32 @@
+# grafana/docker-compose.yml
+
+# versão do docker-compose, mas usar version está obsoleto
+# version: '3.8' # define a versão do docker a ser usada
+
+# vamos agora definir os services que serão executados no docker
+services:
+  
+  # nome do service
+  grafana:
+    
+    # imagem do service
+    image: grafana/grafana-oss # imagem oficial do grafana
+    
+    # container: precisamos dar um nome ao container a ser executado
+    container_name: my-simple-grafana
+    
+    # portas a serem usadas pelo serviço executado
+    ports:
+      - "3000:3000" # nesse caso usaremos a rota 3000
+    
+    # volumes a serem criados
+    volumes:
+      - grafana_data:/var/lib/grafana # volume para persistir os dados do grafana
+
+      - ./grafana/provisioning:/etc/grafana/provisioning # diretório de provisionamento dos dashboards dentro do container
+
+# volumes a serem criados
+volumes:
+
+  # nome do volume a ser criado, note que o nome do volume deve ser o mesmo do volume definido acima
+  grafana_data: # nome do volume a ser criado

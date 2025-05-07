@@ -1,0 +1,18 @@
+# grafana/provisioning/dashboards/dashboard.yml
+
+# versão da aplicação, está em 1 # pois é a versão mais recente do grafana
+apiVersion: 1
+
+# nome do dashboard/provider a ser criado
+provider:
+  # nome do dashboard
+  - name: 'my-simple-grafana' # nome do dashboard, pode ser qualquer nome
+    orgId: 1 # id da organização a qual o dashboard pertence, padrão é 1
+    folder: '' # pasta onde o dashboard será criado, se não existir será criada
+    type: file # tipo do dashboard, nesse caso é um arquivo
+    disableDeletion: false # se o dashboard pode ser deletado, nesse caso não pode
+    updateInterval: 10 # intervalo de atualização do dashboard, nesse caso é 10 segundos
+    allowUpdates: true # se o dashboard pode ser atualizado, nesse caso pode
+    options:
+      # caminho do dashboard, nesse caso é o mesmo do arquivo
+      path: /etc/01-simulated-dashboard/provisioning/dashboards # caminho do dashboard, nesse caso é o mesmo do arquivo
