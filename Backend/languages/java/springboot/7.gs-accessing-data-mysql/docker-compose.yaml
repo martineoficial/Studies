@@ -1,0 +1,19 @@
+services:
+  #  refere-se ao nome do serviço
+  mysql:
+    #    refere-se a imagem que será utilizada
+    image: 'mysql:latest'
+    #    refere-se a porta que será exposta
+    ports:
+      - '3306:3306'
+    expose:
+      - '3306'
+    #   refere-se as variáveis de ambiente que serão utilizadas
+    environment:
+      - 'MYSQL_USER=springuser'
+      - 'MYSQL_PASSWORD=ThePassword'
+      - 'MYSQL_DATABASE=db_example'
+      - 'MYSQL_ROOT_PASSWORD=root'
+    #   refere-se ao volume que será montado. O volume é um diretório que será compartilhado entre o container e o host. No caso, o diretório conf.d do host será compartilhado com o diretório /etc/mysql/conf.d do container. O parâmetro ro refere-se a read-only, ou seja, o container não poderá alterar o conteúdo do diretório.
+    volumes:
+      - "./conf.d:/etc/mysql/conf.d:ro"

@@ -1,0 +1,17 @@
+services:
+  #  refere-se ao nome do serviço
+  mysql:
+    #    refere-se ao nome do container
+    container_name: 'guide-mysql'
+    #    refere-se a imagem que será utilizada
+    image: 'mysql:latest'
+    #    refere-se as variáveis de ambiente que serão utilizadas
+    environment:
+      - 'MYSQL_DATABASE=mydatabase'
+      - 'MYSQL_PASSWORD=secret'
+      # A secret não pode ser exposta no arquivo de configuração
+      - 'MYSQL_ROOT_PASSWORD=verysecret'
+      - 'MYSQL_USER=myuser'
+    #    refere-se a porta que será exposta
+    ports:
+      - '3306'
