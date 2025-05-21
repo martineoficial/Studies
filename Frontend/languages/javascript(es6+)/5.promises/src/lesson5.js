@@ -150,7 +150,7 @@ Promise.all([fetchData4('https://example.com'), fetchData5('https://example.com'
 // O código acima executa várias Promises em paralelo e espera que todas sejam resolvidas ou rejeitadas. Isso é útil quando precisamos fazer várias requisições assíncronas ao mesmo tempo e queremos esperar que todas sejam concluídas antes de continuar. Além disso, podemos usar o método Promise
 
 // testando com dados reais
-// Exemplo de uso de Promises com dados reais
+// Exemplo de uso de Promises com dados de uma API real
 function getData() {
     return new Promise((resolve, reject) => {
         fetch('https://jsonplaceholder.typicode.com/posts/1')
