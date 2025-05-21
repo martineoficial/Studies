@@ -8,5 +8,5 @@
     - Escopo de bloco vs. escopo de função (`var` vs `let`/`const`).
     - Imutabilidade com `const`.
     - Sintaxe concisa de `Arrow Functions` e como elas mudam o `this`.
-- **Repositório:** `01-modern-basics`
+- **Repositório:** `01.modern-basics`
 - **Estrutura:** `index.html`, `src/lesson1.js`.
