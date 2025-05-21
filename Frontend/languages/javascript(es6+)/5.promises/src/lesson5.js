@@ -151,18 +151,31 @@ Promise.all([fetchData4('https://example.com'), fetchData5('https://example.com'
 
 // testando com dados reais
 // Exemplo de uso de Promises com dados reais
-const getData = async () => {
-    try {
-        setTimeout(async () => {
-            const response = await fetch('https://jsonplaceholder.typicode.com/posts');
-            const data = await response.json();
-            console.log(data);
-            console.log('Requisição concluída');
-            return data;
-        }, 8000);
-    } catch (error) {
-        console.error(error);
-    }
+function getData() {
+    return new Promise((resolve, reject) => {
+        fetch('https://jsonplaceholder.typicode.com/posts/1')
+            .then((response) => {
+                if (!response.ok) {
+                    throw new Error('Erro na requisição');
+                }
+                return response.json();
+            })
+            .then((data) => {
+                resolve(data);
+            })
+            .catch((error) => {
+                reject(error);
+            });
+    });
 }
-// Usamos a função getData e lidamos com o resultado ou erro usando os métodos .then(), catch() e finally(). O método .then() é chamado quando a Promise é resolvida com sucesso, o método .catch() é chamado quando a Promise é rejeitada e o método .finally() é chamado independentemente do resultado da Promise.
+
 getData()
+    .then((data) => {
+        console.log(data);
+    })
+    .catch((error) => {
+        console.error(error);
+    })
+    .finally(() => {
+        console.log('Requisição concluída');
+    });
