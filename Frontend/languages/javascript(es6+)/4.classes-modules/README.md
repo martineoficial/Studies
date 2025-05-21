@@ -7,4 +7,4 @@
     - Herança (`extends`, `super`).
     - `import` e `export` para módulos JavaScript nativos (ESM).
 - **Repositório:** `4.classes-modules`
-- **Estrutura:** `index.html` (com `<script type="module">`), `src/Person.js`, `src/Student.js`, `src/main.mjs`.
+- **Estrutura:** `index.html` (com `<script type="module">`), `src/Person.mjs`, `src/Student.mjs`, `src/main.mjs`.
