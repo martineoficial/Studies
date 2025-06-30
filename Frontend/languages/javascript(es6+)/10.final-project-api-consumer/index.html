@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Project - API Consumer</title>
+</head>
+<link rel="stylesheet" href="style.css">
+
+<body>
+    <!-- Título da página -->
+    <h1>API Consumer</h1>
+
+    <!-- Descrição do projeto -->
+    <p>Este é um projeto final que consome uma API e exibe os dados retornados.</p>
+
+    <!-- Parágrafo explicativo sobre o projeto -->
+    <p>O projeto utiliza JavaScript ES6+ e a API JSONPlaceholder para demonstrar como consumir uma API e exibir os dados na página.</p>
+
+    <!-- Parágrafo explicativo sobre a API -->
+    <p>A API JSONPlaceholder é uma API falsa para testes e protótipos, que fornece dados fictícios para simular uma API real.</p>
+
+    <!-- Parágrafo explicativo sobre o endpoint -->
+    <p>O endpoint utilizado neste projeto é <code>todos</code>, que retorna uma lista de tarefas (todos) fictícias.</p>
+
+    <!-- Parágrafo explicativo sobre o botão -->
+    <p>Clique no botão abaixo para consumir a API e exibir os dados retornados.</p>
+
+    <!-- Botão para chamar a função que consome a API -->
+    <!-- O id é usado para referenciar o botão no JavaScript -->
+    <!-- O texto do botão é "Get Data" -->
+    <!-- O botão chama a função getData() quando clicado -->
+    <!-- A função getData() é definida no arquivo app.mjs -->
+    <!-- O arquivo app.mjs é importado no final do body -->
+    <!-- O arquivo app.mjs contém a lógica para consumir a API -->
+    <button type="button" id="get-data-button" onclick="getData()">
+        Get Data
+    </button>
+
+    <div id="data-container">
+        <!-- Div para exibir os dados retornados pela API -->
+        <!-- O id é usado para referenciar a div no JavaScript -->
+        <!-- Os dados serão inseridos dinamicamente pelo JavaScript -->
+        <!-- A div está vazia inicialmente e será preenchida com os dados da API -->
+    </div>
+
+    <!-- Documento padrão HTML para linkar com o JavaScript -->
+    <!-- link para o arquivo javascript com o atributo type="module" para definir que o arquivo é um módulo ES6 -->
+    <script type="module" src="src/app.mjs"></script>
+</body>
+
+</html>
