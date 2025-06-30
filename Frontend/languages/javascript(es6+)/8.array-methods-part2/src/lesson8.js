@@ -1,6 +1,6 @@
 // métodos de array
 
-// recude - para cada elemento faça algo e retorne um único valor
+// reduce - para cada elemento faça algo e retorne um único valor
 // vamos usar o reduce para somar os elementos de um array
 const numbers = [1, 2, 3, 4, 5];
 const sum = numbers.reduce((accumulator, currentValue) => {
