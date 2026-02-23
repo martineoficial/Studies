@@ -1,3 +1,6 @@
 [submodule "go"]
 	path = go
 	url = https://github.com/martineoficial/go.git
+[submodule "Backend/languages/go"]
+	path = Backend/languages/go
+	url = https://github.com/martineoficial/go.git
