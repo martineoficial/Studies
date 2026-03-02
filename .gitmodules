@@ -4,3 +4,6 @@
 [submodule "Backend/languages/go"]
 	path = Backend/languages/go
 	url = https://github.com/martineoficial/go.git
+[submodule "Frontend/frameworks/react-native"]
+	path = Frontend/frameworks/react-native
+	url = https://github.com/martineoficial/react-native.git
